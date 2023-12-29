@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css')}}">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="brand">
+            <img src="https://www.unfv.edu.pe/images/logo_unfv.jpg">
+        </a>
+        <nav class="menu">
+            <div class="btn">
+                <i class="fas fa-times close-btn"></i>
+            </div>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a target="_blank" href="https://jamiro16.github.io">Gastronomía</a></li>
+                <li><a target="_blank" href="https://hachirufo.github.io">Cultura y Tradiciones</a></li>
+                <li><a target="_blank" href="https://hachirufo.github.io">Turismo</a></li>
+                <li><a target="_blank" href="mailto:sebastian_s_o@hotmail.com" href="#">Contáctame</a></li>
+            </ul>
+        </nav>
+        <div class="btn">
+            <i class="fas fa-bars menu-btn"></i>
+        </div>
+    </header>
+
+    <section class="section-main">
+        <h1>Explora Japón</h1>
+    </section>
+
+    <!--   Tarjetas-->
+    <div class="title-cards">
+        <h2>¿Sabías que...</h2>
+    </div>
+    <div class="container-card">
+
+        <div class="card">
+            <figure>
+                <img src="https://elclubdelte.com/wp-content/uploads/2018/06/ceremonia-1.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Cultura del té</h3>
+                <p>
+                    ¡La cultura del té en Japón es realmente fascinante! Se centra en la preparación, la presentación y
+                    la experiencia de tomar té, y ha sido una parte integral de la vida japonesa durante siglos.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img
+                    src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2021/03/isla-gatos-japon-2269737.jpg?tf=3840x">
+            </figure>
+            <div class="contenido-card">
+                <h3>Islas con gatos</h3>
+                <p>En Japón existen varias islas donde la población de gatos supera a la de humanos. Uno de los ejemplos
+                    más famosos es Tashirojima, conocida como "la isla de los gatos", donde los felinos son considerados
+                    como portadores de buena suerte y son cuidados por los habitantes.</p>
+
+            </div>
+        </div>
+        <div class="card">
+            <figure>
+                <img
+                    src="https://imagenes.elpais.com/resizer/qQqIGWu5mFg9uY62FPHCRg_U9mI=/1960x1103/ep01.epimg.net/internacional/imagenes/2020/09/23/mundo_global/1600861973_954383_1600868545_noticia_fotograma.jpg">
+            </figure>
+            <div class="contenido-card">
+                <h3>Parque temático de robots</h3>
+                <p>En la ciudad de Nagasaki, se encuentra un parque temático llamado "Henn-na Hotel" que está atendido
+                    en su mayoría por robots. Desde la recepción hasta el servicio en las habitaciones, estos androides
+                    realizan diversas tareas para los visitantes.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //javascript para el scroll de la barra
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle('down', window.scrollY > 0);
+
+            //cambiar el logo
+            var logo = document.querySelector(".brand img");
+            if (window.scrollY > 0) {
+                logo.setAttribute('src', 'https://www.unfv.edu.pe/images/logo_unfv.jpg');
+            } else {
+                logo.setAttribute('src', 'https://www.unfv.edu.pe/images/logo_unfv.jpg');
+            }
+
+        });
+
+        //javascript para la barra responsiva
+        var menu = document.querySelector('.menu');
+        var menuBtn = document.querySelector('.menu-btn');
+        var closeBtn = document.querySelector('.close-btn');
+
+        menuBtn.addEventListener("click", () => {
+            menu.classList.add('active');
+        });
+
+        closeBtn.addEventListener("click", () => {
+            menu.classList.remove('active');
+        });
+    </script>
+    <footer>
+        <section>
+            <a href="#">Ir al comienzo</a>
+        </section>
+        <p>Copyright 2023</p>
+    </footer>
+</body>
+
+</html>
